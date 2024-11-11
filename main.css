@@ -1,0 +1,13 @@
+#Form_PW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30%;
+}
+#Input_PW{
+    font-size: large;
+}
+#Input_Submit {
+    margin-top: 1%;
+}
