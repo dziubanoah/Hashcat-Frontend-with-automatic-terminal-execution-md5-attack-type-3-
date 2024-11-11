@@ -1,14 +1,8 @@
-<?
-execInBackground('start cmd.exe @cmd /k "ping google.com"');
+<P>Output von IP Config unter Windows:    </P>
 
+<?php
+// Beispiel: 'dir' in CMD ausführen
+exec('cmd.exe /c ipconfig', $output);
 
-
-function execInBackground($cmd) { 
-    if (substr(php_uname(), 0, 7) == "Windows"){ 
-        pclose(popen("start /B ". $cmd, "r"));  
-    } 
-    else { 
-        exec($cmd . " > /dev/null &");   
-    } 
-}
+    echo implode("\n", $output); // Ausgabe des Befehls
 ?>
