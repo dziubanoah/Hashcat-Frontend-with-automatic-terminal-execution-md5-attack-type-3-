@@ -1,13 +1,58 @@
+body {
+    background-color: grey;
+}
+#ZIndex {
+    z-index: 10;
+}
 #Form_PW {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30%;
+    z-index: 20;
+    padding-top: 20%;
+    padding-bottom: 20% ;
 }
 #Input_PW{
     font-size: large;
+    z-index: 20;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: #242526;
+    color: white;
+    height: 25px;
+}
+#Input_PW:hover{
+    border-bottom: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: lightblue;
 }
 #Input_Submit {
     margin-top: 1%;
+    z-index: 20;
+}
+#BGImg {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#FormDIV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-top: 20%;
+    margin-left: 40%;
+    z-index: 10;
+    border-color: blueviolet;
+    border-style: solid;
+    background-color: rgb(211 211 211 / 50%);
+    backdrop-filter: blur(10px);
+    backdrop-filter: contrast(100%);
+    border-radius: 10%;
 }
