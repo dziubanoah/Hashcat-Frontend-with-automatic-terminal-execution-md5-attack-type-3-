@@ -2,21 +2,21 @@ let submit = document.getElementById("Input_Submit");
 let Passwort = document.getElementById("Input_PW");
 
 submit.addEventListener("click", function(){
-    let Value = Passwort.value;
-    window.alert(Value);
-    one();
+    sendInput();
 });
 
-function one () {
-const fs = require('fs')
+        function sendInput() {
+        const inputValue = document.getElementById("Passwort").value;
 
-// Data which will write in a file.
-let data = "Learning how to write in a file."
-
-// Write data in 'Output.txt' .
-fs.writeFile('output.txt', data, (err) => {
-
-    // In case of a error throw err.
-    if (err) throw err;
-})
-    };
+        // Sende den Wert als einfachen Text an den Server
+        fetch('http://localhost:187', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: inputValue
+        })
+        .then(response => response.text())
+        .then(data => console.log('Antwort vom Server:', data))
+        .catch(error => console.error('Fehler:', error));
+    }

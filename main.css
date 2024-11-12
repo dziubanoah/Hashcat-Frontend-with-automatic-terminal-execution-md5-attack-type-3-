@@ -13,7 +13,7 @@ body {
     padding-top: 20%;
     padding-bottom: 20% ;
 }
-#Input_PW{
+.Input_PW{
     font-size: large;
     z-index: 20;
     text-align: center;
