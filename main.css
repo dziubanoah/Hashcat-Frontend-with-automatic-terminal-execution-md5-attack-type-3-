@@ -22,7 +22,7 @@ body {
     color: white;
     height: 25px;
 }
-#Input_PW:hover{
+.Input_PW:hover{
     border-bottom: solid;
     border-top: none;
     border-left: none;
@@ -32,6 +32,8 @@ body {
 #Input_Submit {
     margin-top: 1%;
     z-index: 20;
+    background-color: #242526;
+    color: white;
 }
 #BGImg {
     position: fixed;
@@ -55,4 +57,33 @@ body {
     backdrop-filter: blur(10px);
     backdrop-filter: contrast(100%);
     border-radius: 10%;
+}
+iframe{
+    font-size: large;
+    z-index: 20;
+    background-color: white;
+    color: green;
+    height: 20%;
+    width: 20%;
+    }
+#Div_IFrame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+#Info{
+    font-size: large;
+    background-color: #242526;
+    color: wheat;
+    margin-bottom: 2%;
+}
+#Info:hover{
+    cursor: pointer;
+}
+#Info_Div{
+    width: auto;
+    height: auto;
+    background-color: red;   
+    display: none;
 }
