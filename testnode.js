@@ -15,3 +15,4 @@ http.createServer((req, res) => {
     })
 }).listen(187);
 
+//Weitera aktion zur verschlüsselung:
