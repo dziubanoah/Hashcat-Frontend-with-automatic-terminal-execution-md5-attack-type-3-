@@ -7,10 +7,17 @@ http.createServer((req, res) => {
     req.on("end", () => {
         let value = body; //deklariert body als value
 
-    fs.writeFile('Output.txt', value, (err) => {
+    fs.writeFile('output.txt', value, (err) => {
 
     if (err) throw err;
 })
+function stateChange(newState) {
+    setTimeout(function () {
+        if (newState == -1) {
+            fs.truncate('output.txt', 0, function(){console.log('done')})
+        }
+    }, 5000);
+}
 
     })
 }).listen(187);
