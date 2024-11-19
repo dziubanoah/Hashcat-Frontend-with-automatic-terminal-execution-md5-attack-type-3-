@@ -3,16 +3,15 @@ const fs = require('fs')
 
 http.createServer((req, res) => {
     let body = "";
-    req.on("data", chunk => body += chunk); //empfängt die Daten
+    req.on("data", chunk => encryptedBody += chunk); //empfängt die Daten
     req.on("end", () => {
-        let value = body; //deklariert body als value
 
-    fs.writeFile('output.txt', value, (err) => {
+    fs.writeFile('Hashing_Output.txt', encryptedBody, (err) => {
 
     if (err) throw err;
 })
 
     })
-}).listen(187);
+}).listen(188);
 
 //Weitera aktion zur verschlüsselung:
