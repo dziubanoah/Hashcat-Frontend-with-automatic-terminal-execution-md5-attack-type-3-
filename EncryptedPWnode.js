@@ -15,3 +15,6 @@ http.createServer((req, res) => {
 }).listen(188);
 
 //Weitera aktion zur verschlüsselung:
+const { exec } = require('child_process');
+
+exec('node console-execute.js');

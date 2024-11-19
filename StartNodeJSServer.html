@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartServer</title>
+</head>
+<body>
+    <div id="div">
+    <div class="dv"><button>o</button><input type="checkbox" id="187"><p>- Server port 187</p></div><br>
+    <div class="dv"><button>o</button><input type="checkbox" id="188"><p>- Server port 188</p></div>
+    </div>
+</body>
+<style>
+    #div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+        flex-direction: column;
+    }
+    .dv {
+        background-color: lightgray;
+    }
+    button{
+        width: 50px;
+        border: none;
+    }
+</style>
+<script>
+    let sv187 = document.getElementById("187");
+    let sv188 = document.getElementById("188");
+
+    if(sv187.checked) {
+        window.alert("clicked")
+    }
+
+</script>
+</html>
