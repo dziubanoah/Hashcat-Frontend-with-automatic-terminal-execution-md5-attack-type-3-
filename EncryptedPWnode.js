@@ -3,10 +3,10 @@ const fs = require('fs')
 
 http.createServer((req, res) => {
     let body = "";
-    req.on("data", chunk => encryptedBody += chunk); //empfängt die Daten
+    req.on("data", chunk => body += chunk); //empfängt die Daten
     req.on("end", () => {
 
-    fs.writeFile('Hashing_Output.txt', encryptedBody, (err) => {
+    fs.writeFile('Hashing_Output.txt', body, (err) => {
 
     if (err) throw err;
 })
@@ -15,6 +15,6 @@ http.createServer((req, res) => {
 }).listen(188);
 
 //Weitera aktion zur verschlüsselung:
-const { exec } = require('child_process');
+//const { exec } = require('child_process');
 
-exec('node console-execute.js');
+//exec('node console-execute.js');
