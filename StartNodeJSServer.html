@@ -7,8 +7,8 @@
 </head>
 <body>
     <div id="div">
-    <div class="dv"><button>o</button><input type="checkbox" id="187"><p>- Server port 187</p></div><br>
-    <div class="dv"><button>o</button><input type="checkbox" id="188"><p>- Server port 188</p></div>
+    <div class="dv"><button>o</button><input type="checkbox" id="sv187"><p>- Server port 187</p></div><br>
+    <div class="dv"><button>o</button><input type="checkbox" id="sv188"><p>- Server port 188</p></div>
     </div>
 </body>
 <style>
@@ -28,18 +28,27 @@
     }
 </style>
 <script>
-    let sv187 = document.getElementById("187");
-    let sv188 = document.getElementById("188");
+    let sv187 = document.getElementById("sv187");
+    let sv188 = document.getElementById("sv188");
 
     sv187.addEventListener("change", function() {
         if(sv187.checked){
-            
+            window.alert("Hallo von sv 187")
         }
-    })
+        if(!sv187.checked) {
+            window.alert("ich bin inaktiv 188")
+        }
 
-    if(sv187.checked) {
-        window.alert("clicked#")
-    }
+    });
+    sv188.addEventListener("change", function() {
+        if(sv188.checked){
+            window.alert("Hallo von sv 187")
+        }
+        if(!sv188.checked) {
+            window.alert("ich bin inaktiv 188")
+        }
 
+    });
+        
 </script>
 </html>
