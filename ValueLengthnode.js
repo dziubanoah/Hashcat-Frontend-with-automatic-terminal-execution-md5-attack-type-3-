@@ -7,7 +7,7 @@ http.createServer((req, res) => {
     req.on("end", () => {
         let Length = body; 
         console.log(Length);
-if (Length == "1") {
+if (Length == 1) {
     let LengthValue = "?a";
     fs.writeFile('PWLength.txt', LengthValue, (err) => {
 
@@ -21,21 +21,21 @@ if (Length == 2) {
         if (err) throw err;
     })
 }
-if (Length == "3") {
+if (Length == 3) {
     let LengthValue = "?a?a?a";
     fs.writeFile('PWLength.txt', LengthValue, (err) => {
 
         if (err) throw err;
     })
 }
-if (Length == "4") {
+if (Length == 4) {
     let LengthValue = "?a?a?a?a";
     fs.writeFile('PWLength.txt', LengthValue, (err) => {
 
         if (err) throw err;
     })
 }
-if (Length == "5") {
+if (Length == 5) {
     let LengthValue = "?a?a?a?a?a";
     fs.writeFile('PWLength.txt', LengthValue, (err) => {
 
