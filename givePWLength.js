@@ -3,7 +3,7 @@ let Password_Length = document.getElementById("Passwort");
 
 submit_Length.addEventListener("click", function() {
     var PWLength = Password_Length.length;
-    window.alert(PWLength + " from sv 189 api");
+    //window.alert(PWLength + " from sv 189 api");
     fetch("http://localhost:189", {
         method: 'POST',
             headers: {
@@ -11,7 +11,7 @@ submit_Length.addEventListener("click", function() {
             },
             body: PWLength
     })
-    .then(response => response.text())
+    .then(response3 => response3.text())
     .then(data => console.log('Antwort vom Server:', data))
     .catch(error => console.error('Fehler:', error));
 });
