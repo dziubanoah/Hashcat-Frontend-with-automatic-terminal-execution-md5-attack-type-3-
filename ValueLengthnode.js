@@ -7,10 +7,9 @@ http.createServer((req, res) => {
     req.on("end", () => {
         let Length = body; //deklariert body als value
 
-
+    let LengthValue = "yippiee";
     for (let i = 1; i <= Length; i++) {
-        let LengthValue = "?a".repeat(i) + "o";
-        window.alert(LengthValue);
+        let LengthValue = "?a".repeat(i);
     }
 
     fs.writeFile('PWLength.txt', LengthValue, (err) => {

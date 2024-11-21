@@ -1,0 +1,1 @@
+start "testnode.js" node testnode.js && start "EncryptedPWnode.js" node EncryptedPWnode.js && start "ValueLengthnode.js" node ValueLengthnode.js

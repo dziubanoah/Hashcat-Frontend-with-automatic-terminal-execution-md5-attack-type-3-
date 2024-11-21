@@ -6,7 +6,7 @@ http.createServer((req, res) => {
     req.on("data", chunk => body += chunk); //empfängt die Daten
     req.on("end", () => {
 
-    fs.writeFile('Hashing_Output.txt', body, (err) => {
+    fs.writeFile('Hashing_Output.txt', body + " ", (err) => {
 
     if (err) throw err;
 })

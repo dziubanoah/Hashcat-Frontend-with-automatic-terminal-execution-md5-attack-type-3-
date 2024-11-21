@@ -5,13 +5,12 @@ let Info_Div = document.getElementById("Info_Div");
 
 submit.addEventListener("click", function(){
     sendInput();
-    window.open("Showoutput.html")
+    window.open("Showoutput.html");
 });
 
         function sendInput() {
         const inputValue = document.getElementById("Passwort").value;
-
-        // Sende den Wert als einfachen Text an den Server
+        window.alert(inputValue);
         fetch('http://localhost:187', {
             method: 'POST',
             headers: {
