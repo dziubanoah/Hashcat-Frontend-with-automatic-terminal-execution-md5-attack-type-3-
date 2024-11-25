@@ -7,7 +7,7 @@ fs.readFile('basiccode.txt', 'utf8', (err, data1) => {
     const Basiccode2 = data2.trim();
     fs.readFile('PWLength.txt', 'utf8', (err, data3) => {
       const Basiccode3 = data3.trim()
-      exec(`start cmd.exe /K ${Basiccode} && ${Basiccode2} && ${Basiccode3}`);
+      exec(`start cmd.exe /K "${Basiccode} && ${Basiccode2} && ${Basiccode3}"`);
     });
   });
 });
