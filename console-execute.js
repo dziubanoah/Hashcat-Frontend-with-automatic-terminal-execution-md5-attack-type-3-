@@ -1,5 +1,20 @@
 const fs = require('fs');
 const { exec } = require('child_process');
+const http = require('http')
+const cors = require('cors');
+
+http.createServer((req, res) => {
+  let body = "";
+  req.on("data", chunk => body += chunk); //empfängt die Daten
+  req.on("end", () => {
+      let start_console = body; //deklariert body als value
+      console.log("start_console");
+
+  })
+}).listen(1099);
+
+
+/*
 
 fs.readFile('basiccode.txt', 'utf8', (err, data1) => {
   const Basiccode = data1.trim();
@@ -7,7 +22,9 @@ fs.readFile('basiccode.txt', 'utf8', (err, data1) => {
     const Basiccode2 = data2.trim();
     fs.readFile('PWLength.txt', 'utf8', (err, data3) => {
       const Basiccode3 = data3.trim()
-      exec(`start cmd.exe /K "${Basiccode} && ${Basiccode2} && ${Basiccode3}"`);
+      console.log(`${Basiccode} && ${Basiccode2} && ${Basiccode3}`);
+      exec(`start cmd.exe /K "${Basiccode} ${Basiccode2} ${Basiccode3}"`);
     });
   });
 });
+*/ 
