@@ -1,5 +1,4 @@
 let hackbtn = document.getElementById('hackbtn');
-let console_start_value = "Hacker";
 
 hackbtn.addEventListener("click", function() {
     window.alert("click is true");
@@ -8,7 +7,8 @@ hackbtn.addEventListener("click", function() {
         headers: {
             'Content-Type': 'text/html',
         },
-        body: console_start_value
+        body: "start_console",
+        mode: "no-cors"
     })
     .then(response4 => response4.text())
     .then(data => console.log('Antwort vom Server:', data))

@@ -1,1 +1,7 @@
 start "testnode.js" node testnode.js && start "EncryptedPWnode.js" node EncryptedPWnode.js && start "ValueLengthnode.js" node ValueLengthnode.js
+
+
+
+start "testnode.js" node testnode.js && start "EncryptedPWnode.js" node EncryptedPWnode.js && start "ValueLengthnode.js" node ValueLengthnode.js && start "console-execute.js" node console-execute.js
+
+start "testnode.js" node testnode.js && start "ValueLengthnode.js" node ValueLengthnode.js && start "console-execute.js" node console-execute.js

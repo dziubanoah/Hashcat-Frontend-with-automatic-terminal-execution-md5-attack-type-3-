@@ -10,7 +10,8 @@ submit_encrypt.addEventListener("click", function() {
             headers: {
                 'Content-Type': 'text/plain'
             },
-            body: strHash
+            body: strHash,
+            mode: 'no-cors'
     })
     .then(response2 => response2.text())
     .then(data => console.log('Antwort vom Server:', data))
