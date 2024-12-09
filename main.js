@@ -1,33 +1,31 @@
-let submit = document.getElementById("Input_Submit");
-let Passwort = document.getElementById("Input_PW");
-let Info = document.getElementById("Info");
-let Info_Div = document.getElementById("Info_Div");
+//starter für electron application
 
-submit.addEventListener("click", function(){
-    sendInput();
-    window.open("Showoutput.html");
+const { exec } = require('child_process');
+const { app, BrowserWindow } = require('electron');
+
+// Creates the main window
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 1300,              
+    height: 700,             
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+
+  // Loads HTML file into the window
+  win.loadFile('main.html');
+}
+
+// Calls createWindow() when the app is ready
+app.whenReady().then(createWindow);
+
+// Quits the app when all windows are closed (Windows & Linux)
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });
+exec('start "testnode.js" cmd /k "node testnode.js" && start "ValueLengthnode.js" cmd /k "node ValueLengthnode.js" && start "console-execute.js" cmd /k "node console-execute.js"');
 
-        function sendInput() {
-        const inputValue = document.getElementById("Passwort").value;
-        window.alert(inputValue);
-        fetch('http://localhost:187', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'text/plain'
-            },
-            body: inputValue
-        })
-
-        .then(response => response.text())
-        .then(data => console.log('Antwort vom Server:', data))
-        .catch(error => console.error('Fehler:', error));
-    }    
-    
-Info.addEventListener("mouseover", function() {
-    Info_Div.style.display = "block";
-});
-
-Info.addEventListener("mouseout", function() {
-    Info_Div.style.display = "none";
-});
+//start "testnode.js" cmd /k "node testnode.js" && start "ValueLengthnode.js" cmd /k "node ValueLengthnode.js" && start "console-execute.js" cmd /k "node console-execute.js"
