@@ -8,7 +8,7 @@
         "start": "electron .",
         "build": "electron-packager ."
     },
-    "author": "Jane Doe",
+    "author": "Noah Dziuba",
     "license": "MIT",
     "devDependencies": {
         "electron": "^23.3.13"

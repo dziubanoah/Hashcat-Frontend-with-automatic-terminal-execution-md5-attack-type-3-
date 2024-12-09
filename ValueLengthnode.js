@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require('fs')
 
+//Schreibt die Passwortlänge in die Textdatei
 http.createServer((req, res) => {
     let body = "";
     req.on("data", chunk => body += chunk); //empfängt die Daten

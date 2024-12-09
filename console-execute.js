@@ -3,6 +3,8 @@ const { exec } = require('child_process');
 const http = require('http')
 const cors = require('cors');
 
+
+// sorget fürs lesen der textdateien und Baut den hashcat command zusammen.
 http.createServer((req, res) => {
   let body = "";
   req.on("data", chunk => body += chunk); //empfängt die Daten

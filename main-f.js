@@ -8,6 +8,7 @@ submit.addEventListener("click", function(){
     window.open("Showoutput.html");
 });
 
+        //Nutzt die Fetch API, um den server :187 die werte zu übergeben.
         function sendInput() {
         const inputValue = document.getElementById("Passwort").value;
         window.alert(inputValue);
@@ -23,7 +24,8 @@ submit.addEventListener("click", function(){
         .then(data => console.log('Antwort vom Server:', data))
         .catch(error => console.error('Fehler:', error));
     }    
-    
+
+//Zeigt das INFO feld bei einem Maus hover.
 Info.addEventListener("mouseover", function() {
     Info_Div.style.display = "block";
 });

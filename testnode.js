@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require('fs');
 const crypto =require('crypto');
 
+//Verarbeitet die gesendenen Daten und schreibt die werte in die ensprechende testdatei.
 http.createServer((req, res) => {
     let body = "";
     req.on("data", chunk => body += chunk); //empfängt die Daten

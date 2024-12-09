@@ -17,3 +17,4 @@ submit_encrypt.addEventListener("click", function() {
     .then(data => console.log('Antwort vom Server:', data))
     .catch(error => console.error('Fehler:', error));
 });
+//wird im Aktuellen code nicht gebraucht
