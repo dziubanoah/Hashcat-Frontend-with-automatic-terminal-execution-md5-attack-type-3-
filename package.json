@@ -15,6 +15,7 @@
     },
     "keywords": [],
     "dependencies": {
+        "http": "^0.0.1-security",
         "nvm": "^0.0.4"
     }
 }
