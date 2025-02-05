@@ -8,9 +8,14 @@ submit.addEventListener("click", function() {
 function giveValue() {
 
     let pwData = pw.value
-    fetch("http://10.134.28.45:8080", {
+    fetch("http://localhost:8080", {
         method: "POST",
-        mode: "no-cors",
-        body: pwData
+        headers: {
+            "Content-Type": "application/json",  // Header für JSON-Daten
+        },
+        body: JSON.stringify({Passwort: pwData})
     })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error: ", error));
 }
