@@ -1,15 +1,14 @@
 import http from "http";
-import express from "express";
 import url from "url";
 
-http.createServer(function (req, res) {
-    res.setHeader('Access-Control-Allow-Methods', 'POST');
-
-    if(req.method == "POST") {
-        let body = "";
-        req.on("data", chunk => {
-            body += chunk
-        });
+function requestlistener(request, response){
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    if (request.method == "POST") {
+        console.log("Hab was gefunden")
     }
+}
 
-}).listen(8080);
+const backend_Server = http.createServer(requestlistener);
+
+backend_Server.listen(8080);
