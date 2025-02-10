@@ -6,6 +6,8 @@ function requestlistener(request, response){
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
+    let basiscode = "cd C:\hashcat-6.2.6 && hashcat.exe -m 0 -a 3 ";
+
     if (request.method == "OPTIONS") {
         console.log("OPTIONS bekommen");
         console.log(request.method);
