@@ -13,7 +13,7 @@ function giveValue() {
         headers: {
             "Content-Type": "application/json",  // Header für JSON-Daten
         },
-        body: JSON.stringify({Passwort: pwData})
+        body: pwData
     })
     .then(response => response.json())
     .then(data => console.log(data))
