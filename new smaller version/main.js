@@ -7,13 +7,15 @@ submit.addEventListener("click", function() {
 
 function giveValue() {
 
-    let pwData = pw.value
+    let pwData = pw.value;
+    let pwData_md5 = CryptoJS.MD5(pwData).toString();
+    console.log(pwData_md5)
     fetch("http://localhost:8080", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",  // Header für JSON-Daten
+            "Content-Type": "text/plaine",  // Header für JSON-Daten
         },
-        body: pwData
+        body: pwData_md5
     })
     .then(response => response.json())
     .then(data => console.log(data))
