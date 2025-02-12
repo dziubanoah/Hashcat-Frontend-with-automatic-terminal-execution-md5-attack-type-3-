@@ -23,7 +23,7 @@ function requestlistener(request, response){
             body += chunk // empfangene Daten werden zu Body hinzugefügt
         });
         request.on("end", () => { // wenn der req vollständig war, wird der wert ausgegeben
-            console.log("empfangene Datei: " + body)
+            console.log("empfangene Datei: " + body[0])
         });
     }
     else {
