@@ -1,5 +1,6 @@
 import http from "http";
-import cors from "cors"
+import cors from "cors";
+import { exec } from "child_process";
 
 function requestlistener(request, response){
     response.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,8 +23,14 @@ function requestlistener(request, response){
         request.on("data", chunk => {
             body += chunk // empfangene Daten werden zu Body hinzugefügt
         });
-        request.on("end", () => { // wenn der req vollständig war, wird der wert ausgegeben
-            console.log("empfangene Datei: " + body[0])
+        request.on("end", () => { // wenn der request vollständig war, werden die Werte ausgegeben.
+            let prase_Body = JSON.parse(body); // sorgt dafür dass die JSON als JavaScript Objekt behandelt wird.
+            console.log("empfangene Datei: " + prase_Body);
+            console.log("pw is = " + prase_Body.Passwort_verschlüsselt);
+            console.log("pw länge is = " + prase_Body.Passwort_Laenge_for_hashcat);
+            let Passwort_verschlüsselt =  prase_Body.Passwort_verschlüsselt;
+            let Passwort_Laenge_for_hashcat = prase_Body.Passwort_Laenge_for_hashcat;
+            exec(`start cmd.exe /K "${basiscode} ${Passwort_verschlüsselt} ${Passwort_Laenge_for_hashcat}"`);
         });
     }
     else {

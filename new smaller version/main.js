@@ -6,6 +6,7 @@ submit.addEventListener("click", function() {
 });
 
 function giveValue() {
+    // hier wird die Passwortlänge festgelegt, damit die HashCat Befehlssyntax korrekt gebildet werden kann.
     let pwData_Laenge = pw.value.length
     console.log(pwData_Laenge);
     let pwData_laenge_for_hashcat = "?a".repeat(pwData_Laenge);
